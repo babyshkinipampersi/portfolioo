@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<header>
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+      <ul class="menu__box">
+        <li><a class="menu__item" href="#about">About</a></li>
+        <li><a class="menu__item" href="#works">Works</a></li>
+        <li><a class="menu__item" href="#contact">Contact</a></li>
+      </ul>
+  </div>
+</header>
+  
+<div id="hero" class="reveal">
+    <img class="sun" src='img/sun.png' />
+  </div>
+
+    <img class="clouds2" src="img/clouds.png"/>
+  
+  <section id="about" class="reveal">
+    <div class="abtme">
+          <svg width="500" height="100" xmlns="http://www.w3.org/2000/svg">
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                  font-family="Irish Grover" font-size="100" fill="none" stroke="#fff3e0" stroke-width="1"
+                  stroke-dasharray="1000" stroke-dashoffset="1000">
+              About Me
+              <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="4s"
+                      calcMode="spline" keySplines="0.4 0 0.2 1" fill="freeze" />
+            </text>
+          </svg>
+          <p>I’m a Front-end Developer & Designer from the Ukraine. I can:
+            Flexibly adapt to any deadlines and time frames,
+            experience critical edits with dignity (and a pack of caffeine),
+            find a common language even with the most mysterious technical task,
+            give everyone around confidence that "everything will be ready on time",
+            retain calm and a sense of humor when the server crashed at 11:59 PM.
+            <br><br>
+            What can I do:<br><br>
+            Develop landing pages and business card sites from scratch
+            Build responsive pages for different devices
+            Create animations using CSS and SVG
+            Configure and customize WordPress sites. Integrate layout in WordPress
+            Create dynamic sites with admin panel (PHP + MySQL)
+            Write frontend in React (using API, basic logic of components)
+          </p>
+</div>
+
+    <div class="skills">
+    <h2>Soft Skills</h2>
+    <ul>
+      <li>Communication skills</li>
+      <li>Teamwork skills</li>
+      <li>Responsibility</li>
+      <li>Self-organization</li>
+      <li>Critical thinking</li>
+      <li>Creativity</li>
+      <li>Time management</li>
+      <li>Ability to learn quickly</li>
+      <li>Patience</li>
+    </ul>
+  </div>
+
+  <div class="skills">
+    <h2>Hard Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Responsive Web Design</li>
+      <li>CSS & SVG Animations</li>
+      <li>WordPress Customization</li>
+      <li>PHP + MySQL (Dynamic Sites)</li>
+      <li>React (Basic Components, API usage)</li>
+    </ul>
+  </div>
+
+  </section>
+
+  <section id="works" class="reveal">
+
+    <img class="clouds3" src="img/cloudssecondblock.png"/> 
+
+    <svg width="500" height="150" xmlns="http://www.w3.org/2000/svg">
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                  font-family="Irish Grover" font-size="100" fill="none" stroke="white" stroke-width="1"
+                  stroke-dasharray="1000" stroke-dashoffset="1000">
+              My Works
+              <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="4s"
+                      calcMode="spline" keySplines="0.4 0 0.2 1" fill="freeze" />
+            </text>
+          </svg>
+
+
+
+    <div class="workgallery">
+      <img src="img/workone.jpg" />
+      <img src="img/workthree.jpg" />
+      <img src="img/workfour.jpg" />
+      <img src="img/workfive.jpg" />
+    </div>
+  </section>
+
+    <img class="clouds4" src="img/cloudsthirdblock.png"/> 
+
+  <section id="contact" class="reveal">
+
+    <img class="star1" src="img/star.png"/>
+    <img class="star2" src="img/star.png"/>
+
+    <svg width="500" height="150" xmlns="http://www.w3.org/2000/svg">
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                  font-family="Irish Grover" font-size="100" fill="none" stroke="white" stroke-width="1"
+                  stroke-dasharray="1000" stroke-dashoffset="1000">
+              Let's Talk!
+              <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="4s"
+                      calcMode="spline" keySplines="0.4 0 0.2 1" fill="freeze" />
+            </text>
+          </svg>
+          <div id="contact_div">
+              <div class="contact_divdiv">
+              <h2>Gmail:</h2>
+              <p>mohovamasa3@gmail.com</p>
+
+              <h2>Tg:</h2>
+              <p>@vonychka228</p>
+              <p>I answer there faster!</p>
+
+              <h2>Phone number:</h2>
+              <p>+380680338969</p>
+              </div>
+          </div>
+        
+</section>
+
+</div>
+
+
+  <script>
+    // Scroll animation
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      reveals.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight - 100) {
+          section.classList.add('active');
+        }
+      });
+    });
+
+    // Burger menu toggle
+    const burger = document.getElementById('burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    });
+  </script>
+</body>
+</html>
