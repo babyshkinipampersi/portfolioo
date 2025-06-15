@@ -5,7 +5,7 @@
 }
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden; /* запрещает горизонтальную прокрутку */
+    overflow-x: hidden;
   }
 body {
   width: 100%;
